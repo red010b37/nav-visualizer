@@ -1,6 +1,10 @@
+library nav_visualizer;
+
 
 import 'package:stagexl/stagexl.dart';
 import 'dart:math';
+import 'package:nav_visualizer/core/mvc/mediator.dart';
+import 'package:nav_visualizer/core/base/mediator_core.dart';
 
 class ApplicationMediator
 {
@@ -17,7 +21,7 @@ class ApplicationMediator
     registerControllers();
     registerModels();
 
-    test();
+    //test();
   }
 
   test() async {
@@ -57,7 +61,10 @@ class ApplicationMediator
   }
 
 
-  registerViews(){}
+  registerViews(){
+    MediatorCore.registerView(new Mediator(_displayObject));
+
+  }
   registerControllers(){}
   registerModels(){}
 

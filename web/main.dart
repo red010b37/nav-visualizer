@@ -1,13 +1,15 @@
 import 'dart:async';
 import 'dart:html' as html;
 import 'package:stagexl/stagexl.dart';
-import 'src/application_mediator.dart';
+import 'application_mediator.dart';
 
 Future<Null> main() async {
   StageOptions options = new StageOptions()
     ..backgroundColor = Color.White
     ..renderEngine = RenderEngine.WebGL;
 
+
+  print('asdfkasdfgajksdfgajsdfgajksdf');
 
   var canvas = html.querySelector('#stage');
   var stage = new Stage(canvas, width: 1280, height: 800, options: options);

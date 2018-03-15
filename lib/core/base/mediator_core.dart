@@ -1,6 +1,6 @@
 library core.base.medaitorCore;
 
-import 'i_medator.dart';
+import '../mvc/mediator.dart';
 
  class MediatorCore {
 
@@ -16,7 +16,7 @@ import 'i_medator.dart';
   }
 
 
-  static registerView(IMediator view) {
+  static registerView(Mediator view) {
     if(viewMap == null) {
       viewMap = new Map();
     }
@@ -31,6 +31,8 @@ import 'i_medator.dart';
       }
 
     });
+
+    print("ADDED");
 
     viewMap[view.name] = view;
   }
