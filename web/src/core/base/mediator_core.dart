@@ -1,9 +1,10 @@
 library core.base.medaitorCore;
 
+import 'i_medator.dart';
 
  class MediatorCore {
 
- static List viewList;
+ static Map viewMap;
  static MediatorCore _instance;
 
 //private static var __instance:MediatorCore;
@@ -15,12 +16,23 @@ library core.base.medaitorCore;
   }
 
 
-  static registerView(view) {
-    if(viewList == null) {
-      viewList = new List();
+  static registerView(IMediator view) {
+    if(viewMap == null) {
+      viewMap = new Map();
     }
 
-    viewList[view] = view;
+
+    //check to see we havent already registered a view with these details
+    viewMap.forEach((k, v) {
+
+      if (k == view.name) {
+        throw new StateError("View already registered with the name ${k}");
+        return;
+      }
+
+    });
+
+    viewMap[view.name] = view;
   }
 
 }
