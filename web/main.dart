@@ -1,18 +1,26 @@
 import 'dart:async';
 import 'dart:html' as html;
 import 'package:stagexl/stagexl.dart';
-import 'dart:math';
+import 'src/application_mediator.dart';
 
 Future<Null> main() async {
   StageOptions options = new StageOptions()
     ..backgroundColor = Color.White
     ..renderEngine = RenderEngine.WebGL;
 
+
   var canvas = html.querySelector('#stage');
   var stage = new Stage(canvas, width: 1280, height: 800, options: options);
 
   var renderLoop = new RenderLoop();
   renderLoop.addStage(stage);
+
+
+  ApplicationMediator appMediator = new ApplicationMediator(stage);
+
+
+
+  /*
 
   var resourceManager = new ResourceManager();
   resourceManager.addBitmapData("dart", "images/dart@1x.png");
@@ -47,6 +55,9 @@ Future<Null> main() async {
   });
   logo.mouseCursor = MouseCursor.POINTER;
 
+  */
+
   // See more examples:
   // https://github.com/bp74/StageXL_Samples
 }
+
