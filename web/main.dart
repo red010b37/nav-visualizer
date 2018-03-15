@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:html' as html;
 import 'package:stagexl/stagexl.dart';
 import 'application_mediator.dart';
+import 'package:nav_visualizer/app_config.dart';
 
 Future<Null> main() async {
   StageOptions options = new StageOptions()
@@ -9,10 +10,8 @@ Future<Null> main() async {
     ..renderEngine = RenderEngine.WebGL;
 
 
-  print('asdfkasdfgajksdfgajsdfgajksdf');
-
   var canvas = html.querySelector('#stage');
-  var stage = new Stage(canvas, width: 1280, height: 800, options: options);
+  var stage = new Stage(canvas, width: stageWidth, height: stageHeight, options: options);
 
   var renderLoop = new RenderLoop();
   renderLoop.addStage(stage);
