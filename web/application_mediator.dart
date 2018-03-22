@@ -4,6 +4,8 @@ library nav_visualizer;
 import 'package:stagexl/stagexl.dart';
 import 'dart:math';
 import 'package:nav_visualizer/core/base/mediator_core.dart';
+import 'package:nav_visualizer/core/base/model_core.dart';
+import 'package:nav_visualizer/app/models/daemon_rpc_proxy.dart';
 import 'package:nav_visualizer/app/views/mempool/mempool_mediator.dart';
 import 'package:nav_visualizer/app/notifications.dart';
 
@@ -65,14 +67,16 @@ class ApplicationMediator
   registerViews(){
     MediatorCore.registerView(new MempoolMediator(_displayObject, _stage.juggler));
 
-
+    // temp here will move later
     notificationStreamController.add(new Notification(AppNotifications.showMempoolScreen));
 
-
-    
   }
   registerControllers(){}
-  registerModels(){}
+  registerModels(){
+
+    ModelCore.registerModel(new DaemonRPCModel());
+
+  }
 
 
 

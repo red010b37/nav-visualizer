@@ -1,7 +1,6 @@
 
 import 'package:stagexl/stagexl.dart';
 import 'package:nav_visualizer/app/views/mempool/mem_dot.dart';
-import 'dart:math';
 
 class MempoolView extends DisplayObjectContainer {
 

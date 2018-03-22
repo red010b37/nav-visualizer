@@ -1,15 +1,14 @@
-library core.base.medaitorCore;
 
 import '../mvc/mediator.dart';
 
- class MediatorCore {
+class MediatorCore {
 
- static Map viewMap;
- static MediatorCore _instance;
+  static Map viewMap;
+//  static MediatorCore _instance;
 
-//private static var __instance:MediatorCore;
-//
-//private static var __display:DisplayObjectContainer
+  //private static var __instance:MediatorCore;
+  //
+  //private static var __display:DisplayObjectContainer
 
   MediatorCore() {
     throw new StateError ('You cannot make a new instance of the ViewCore');
@@ -27,7 +26,6 @@ import '../mvc/mediator.dart';
 
       if (k == view.name) {
         throw new StateError("View already registered with the name ${k}");
-        return;
       }
 
     });

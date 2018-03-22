@@ -17,7 +17,7 @@ Future<Null> main() async {
   renderLoop.addStage(stage);
 
 
-  ApplicationMediator appMediator = new ApplicationMediator(stage);
+  new ApplicationMediator(stage);
 
 
 
