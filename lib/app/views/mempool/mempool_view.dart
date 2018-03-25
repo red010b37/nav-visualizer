@@ -18,13 +18,16 @@ class MempoolView extends DisplayObjectContainer {
     
     _masterJuggler.add(_viewJuggler);
 
-    for(int i = 0; i < 100; i++) {
-
-      this.addChild(new MemDot(_viewJuggler));
-
-    }
-
-
   }
+
+
+  addDots (int n) {
+    for (int i = 0; i < n; i++) {
+      this.addChild(new MemDot(_viewJuggler));
+    }
+  }
+
+
+
 
 }

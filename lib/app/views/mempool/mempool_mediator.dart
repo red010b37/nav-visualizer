@@ -30,10 +30,20 @@ class MempoolMediator extends Mediator {
         showScreen();
         break;
 
+      case AppNotifications.newMempoolTransactions:
+        memPoolTransactionHandler(n);
+        break;
+
     }
 
   }
 
+
+  memPoolTransactionHandler (Notification note) {
+    if(_view != null) {
+      _view.addDots(note.data);
+    }
+  }
 
   showScreen() {
     if(_view == null) {

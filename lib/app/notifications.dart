@@ -3,7 +3,9 @@ import 'dart:async';
 
 enum AppNotifications {
 
-  showMempoolScreen
+  showMempoolScreen,
+
+  newMempoolTransactions
 
 }
 
