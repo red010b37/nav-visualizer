@@ -5,7 +5,7 @@ import 'package:stagexl/stagexl.dart';
 import 'dart:math';
 import 'package:nav_visualizer/core/base/mediator_core.dart';
 import 'package:nav_visualizer/core/base/model_core.dart';
-import 'package:nav_visualizer/app/models/daemon_rpc_proxy.dart';
+import 'package:nav_visualizer/app/models/mempool_model.dart';
 import 'package:nav_visualizer/app/views/mempool/mempool_mediator.dart';
 import 'package:nav_visualizer/app/notifications.dart';
 
@@ -74,7 +74,7 @@ class ApplicationMediator
   registerControllers(){}
   registerModels(){
 
-    ModelCore.registerModel(new DaemonRPCModel());
+    ModelCore.registerModel(new MempoolModel());
 
   }
 
